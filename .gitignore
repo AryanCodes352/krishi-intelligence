@@ -95,3 +95,5 @@ frontend/public/slides/
 frontend/src/app/slides/
 sample_soil_health_card.png
 share.bat
+
+!frontend/src/lib/
