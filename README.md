@@ -2,7 +2,7 @@
 
 **AI-Powered Farm Digital Twin & Precision Agriculture Decision-Support System**
 
-🔗 **[Live App](https://krishi-intelligence.vercel.app)** | **[API Docs](https://krishi-intelligence-api.onrender.com/docs)** | `FastAPI 0.115` · `Next.js 14` · `XGBoost 2.1` · `SQLAlchemy 2.0` · `116 Pytest Passed`
+🔗 **[Live App](https://krishi-intelligence-five.vercel.app)** | **[API Docs](https://krishi-intelligence-api.onrender.com/docs)** | `FastAPI 0.115` · `Next.js 14` · `XGBoost 2.1` · `SQLAlchemy 2.0` · `116 Pytest Passed`
 
 ---
 
