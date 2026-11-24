@@ -84,3 +84,14 @@ __pycache__/
 
 data/uploads/
 tools/cloudflared.exe
+
+*.pdf
+*.pptx
+*.docx
+docs/
+screenshots/
+scripts/
+frontend/public/slides/
+frontend/src/app/slides/
+sample_soil_health_card.png
+share.bat
