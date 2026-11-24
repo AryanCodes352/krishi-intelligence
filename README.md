@@ -4,16 +4,11 @@
 
 
 
-[![Live App](https://img.shields.io/badge/Live_App-Vercel-000000?style=for-the-badge&logo=vercel)](https://krishi-intelligence.vercel.app)
-
-[![FastAPI](https://img.shields.io/badge/Backend-FastAPI_0.115-009688?style=for-the-badge&logo=fastapi)](https://fastapi.tiangolo.com/)
-
-[![Next.js](https://img.shields.io/badge/Frontend-Next.js_14-000000?style=for-the-badge&logo=next.js)](https://nextjs.org/)
-
-[![XGBoost](https://img.shields.io/badge/ML-XGBoost_2.1-150458?style=for-the-badge&logo=python)](https://xgboost.readthedocs.io/)
-
-[![Tests](https://img.shields.io/badge/Pytest-116_Passed-2EA44F?style=for-the-badge&logo=pytest)](backend/tests)
-
+[![Live App](https://img.shields.io/badge/Live%20App-Vercel-000000?style=for-the-badge&logo=vercel)](https://krishi-intelligence.vercel.app)
+[![FastAPI](https://img.shields.io/badge/Backend-FastAPI%200.115-009688?style=for-the-badge&logo=fastapi&logoColor=white)](https://fastapi.tiangolo.com/)
+[![Next.js](https://img.shields.io/badge/Frontend-Next.js%2014-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)](https://nextjs.org/)
+[![XGBoost](https://img.shields.io/badge/ML-XGBoost%202.1-150458?style=for-the-badge&logo=python&logoColor=white)](https://xgboost.readthedocs.io/)
+[![Tests](https://img.shields.io/badge/Pytest-116%20Passed-2EA44F?style=for-the-badge&logo=pytest&logoColor=white)](backend/tests)
 
 
 KRISHI Intelligence is a full-stack **Agricultural Decision Support System (ADSS)** built to solve three decoupled operational challenges in smallholder wheat farming: localized agro-climatic volatility, opaque APMC market price swings, and uncalibrated soil fertilization.
