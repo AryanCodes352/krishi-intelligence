@@ -1,0 +1,216 @@
+{
+  "_meta": {
+    "description": "Regional soil estimates for Uttar Pradesh districts",
+    "source": "ICAR-NBSS&LUP (National Bureau of Soil Survey & Land Use Planning) District-level Soil Maps, 2nd Edition (2018). Published by Indian Council of Agricultural Research.",
+    "reference": "Soil Resource Data of Uttar Pradesh at 1:500,000 scale, NBSS Publ. No. 151",
+    "data_type": "REGIONAL_ESTIMATE",
+    "coverage": "District-level aggregates. Individual farm values may vary significantly.",
+    "last_updated": "2018-12-01",
+    "data_quality": "medium",
+    "note": "These are district-level soil survey averages, NOT individual farm measurements. Farmers should upload actual soil test reports for precise assessment.",
+    "units": {
+      "nitrogen": "kg/ha (available N)",
+      "phosphorus": "kg/ha (available P2O5)",
+      "potassium": "kg/ha (available K2O)",
+      "organic_carbon": "% by weight",
+      "ph": "dimensionless (1:2 water ratio)",
+      "soil_moisture_awc": "mm/meter depth"
+    }
+  },
+  "districts": {
+    "lucknow": {
+      "district": "Lucknow",
+      "state": "Uttar Pradesh",
+      "lat_centroid": 26.8467,
+      "lon_centroid": 80.9462,
+      "soil_type": "Sandy Loam to Loam",
+      "texture": "Loamy",
+      "parent_material": "Gangetic alluvium",
+      "drainage": "Well drained to moderately well drained",
+      "ph": {
+        "value": 7.5,
+        "range_min": 7.2,
+        "range_max": 7.8,
+        "status": "SLIGHTLY_ALKALINE",
+        "wheat_suitability": "GOOD",
+        "optimal_for_wheat_min": 6.5,
+        "optimal_for_wheat_max": 7.5
+      },
+      "nitrogen": {
+        "value": 240,
+        "range_min": 200,
+        "range_max": 280,
+        "unit": "kg/ha",
+        "status": "MEDIUM",
+        "wheat_suitability": "MODERATE",
+        "optimal_min": 280,
+        "optimal_max": 400,
+        "recommendation": "Apply 50 kg/ha urea as basal dose; 50 kg/ha at first irrigation"
+      },
+      "phosphorus": {
+        "value": 18,
+        "range_min": 14,
+        "range_max": 22,
+        "unit": "kg/ha",
+        "status": "MEDIUM",
+        "wheat_suitability": "MODERATE",
+        "optimal_min": 20,
+        "optimal_max": 40,
+        "recommendation": "Apply 60 kg/ha DAP at sowing"
+      },
+      "potassium": {
+        "value": 220,
+        "range_min": 190,
+        "range_max": 260,
+        "unit": "kg/ha",
+        "status": "HIGH",
+        "wheat_suitability": "GOOD",
+        "optimal_min": 150,
+        "optimal_max": 300,
+        "recommendation": "No additional K fertilizer required"
+      },
+      "organic_carbon": {
+        "value": 0.45,
+        "range_min": 0.35,
+        "range_max": 0.55,
+        "unit": "%",
+        "status": "LOW",
+        "wheat_suitability": "POOR",
+        "optimal_min": 0.75,
+        "optimal_max": 1.5,
+        "recommendation": "Incorporate 5 t/ha farmyard manure before sowing; practice crop residue retention"
+      },
+      "soil_moisture_awc_mm_per_m": 120,
+      "bulk_density_g_cc": 1.45,
+      "cec_meq_100g": 12.5,
+      "wheat_crop_suitability": {
+        "score": 74,
+        "label": "Good",
+        "limiting_factors": ["low_organic_carbon", "nitrogen_below_optimal", "slightly_alkaline_ph"],
+        "score_breakdown": {
+          "ph": {"score": 18, "max": 20, "status": "GOOD"},
+          "nitrogen": {"score": 13, "max": 20, "status": "MODERATE"},
+          "phosphorus": {"score": 12, "max": 15, "status": "MODERATE"},
+          "potassium": {"score": 15, "max": 15, "status": "GOOD"},
+          "organic_carbon": {"score": 8, "max": 20, "status": "LOW"},
+          "texture": {"score": 8, "max": 10, "status": "GOOD"}
+        }
+      },
+      "source": "ICAR-NBSS&LUP District Soil Map 2018",
+      "data_quality": "medium",
+      "data_type": "REGIONAL_ESTIMATE"
+    },
+    "kanpur_nagar": {
+      "district": "Kanpur Nagar",
+      "state": "Uttar Pradesh",
+      "lat_centroid": 26.4499,
+      "lon_centroid": 80.3319,
+      "soil_type": "Loam to Sandy Clay Loam",
+      "texture": "Loamy",
+      "parent_material": "Gangetic alluvium",
+      "drainage": "Well drained",
+      "ph": {
+        "value": 7.6,
+        "range_min": 7.3,
+        "range_max": 7.9,
+        "status": "SLIGHTLY_ALKALINE",
+        "wheat_suitability": "GOOD"
+      },
+      "nitrogen": {
+        "value": 225,
+        "range_min": 190,
+        "range_max": 265,
+        "unit": "kg/ha",
+        "status": "MEDIUM",
+        "wheat_suitability": "MODERATE"
+      },
+      "phosphorus": {
+        "value": 16,
+        "range_min": 12,
+        "range_max": 20,
+        "unit": "kg/ha",
+        "status": "MEDIUM",
+        "wheat_suitability": "MODERATE"
+      },
+      "potassium": {
+        "value": 195,
+        "range_min": 170,
+        "range_max": 230,
+        "unit": "kg/ha",
+        "status": "MEDIUM",
+        "wheat_suitability": "GOOD"
+      },
+      "organic_carbon": {
+        "value": 0.42,
+        "range_min": 0.32,
+        "range_max": 0.52,
+        "unit": "%",
+        "status": "LOW",
+        "wheat_suitability": "POOR"
+      },
+      "wheat_crop_suitability": {
+        "score": 70,
+        "label": "Moderate-Good"
+      },
+      "source": "ICAR-NBSS&LUP District Soil Map 2018",
+      "data_quality": "medium",
+      "data_type": "REGIONAL_ESTIMATE"
+    },
+    "unnao": {
+      "district": "Unnao",
+      "state": "Uttar Pradesh",
+      "lat_centroid": 26.5456,
+      "lon_centroid": 80.4882,
+      "soil_type": "Sandy Loam",
+      "texture": "Sandy Loam",
+      "parent_material": "Gangetic alluvium",
+      "drainage": "Well drained",
+      "ph": {
+        "value": 7.4,
+        "range_min": 7.0,
+        "range_max": 7.8,
+        "status": "NEAR_NEUTRAL",
+        "wheat_suitability": "VERY_GOOD"
+      },
+      "nitrogen": {
+        "value": 250,
+        "range_min": 210,
+        "range_max": 295,
+        "unit": "kg/ha",
+        "status": "MEDIUM",
+        "wheat_suitability": "MODERATE"
+      },
+      "phosphorus": {
+        "value": 20,
+        "range_min": 16,
+        "range_max": 26,
+        "unit": "kg/ha",
+        "status": "MEDIUM",
+        "wheat_suitability": "GOOD"
+      },
+      "potassium": {
+        "value": 235,
+        "range_min": 200,
+        "range_max": 275,
+        "unit": "kg/ha",
+        "status": "HIGH",
+        "wheat_suitability": "GOOD"
+      },
+      "organic_carbon": {
+        "value": 0.50,
+        "range_min": 0.40,
+        "range_max": 0.62,
+        "unit": "%",
+        "status": "LOW",
+        "wheat_suitability": "MODERATE"
+      },
+      "wheat_crop_suitability": {
+        "score": 77,
+        "label": "Good"
+      },
+      "source": "ICAR-NBSS&LUP District Soil Map 2018",
+      "data_quality": "medium",
+      "data_type": "REGIONAL_ESTIMATE"
+    }
+  }
+}
