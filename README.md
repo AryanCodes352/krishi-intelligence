@@ -1,152 +1,62 @@
-# KRISHI Intelligence
+﻿# 🌾 KRISHI Intelligence
 
-**Multi-Factor Agro-Climatic Digital Twin with Dynamic Provenance Guardrails and Market Price Forecasting**
+**AI-Powered Farm Digital Twin & Precision Agriculture Decision-Support System**
 
-
-
-[![Live App](https://img.shields.io/badge/Live%20App-Vercel-000000?style=for-the-badge&logo=vercel)](https://krishi-intelligence.vercel.app)
-[![FastAPI](https://img.shields.io/badge/Backend-FastAPI%200.115-009688?style=for-the-badge&logo=fastapi&logoColor=white)](https://fastapi.tiangolo.com/)
-[![Next.js](https://img.shields.io/badge/Frontend-Next.js%2014-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)](https://nextjs.org/)
-[![XGBoost](https://img.shields.io/badge/ML-XGBoost%202.1-150458?style=for-the-badge&logo=python&logoColor=white)](https://xgboost.readthedocs.io/)
-[![Tests](https://img.shields.io/badge/Pytest-116%20Passed-2EA44F?style=for-the-badge&logo=pytest&logoColor=white)](backend/tests)
-
-
-KRISHI Intelligence is a full-stack **Agricultural Decision Support System (ADSS)** built to solve three decoupled operational challenges in smallholder wheat farming: localized agro-climatic volatility, opaque APMC market price swings, and uncalibrated soil fertilization.
-
-
+🔗 **[Live App](https://krishi-intelligence.vercel.app)** | **[API Docs](https://krishi-intelligence-api.onrender.com/docs)** | `FastAPI 0.115` · `Next.js 14` · `XGBoost 2.1` · `SQLAlchemy 2.0` · `116 Pytest Passed`
 
 ---
 
+## Overview
 
+**KRISHI Intelligence** bridges the gap between raw agronomic data and actionable field decisions for smallholder farmers. By combining a real-time **Farm Digital Twin** with machine learning yield and risk models and localized market intelligence, the platform helps farmers optimize irrigation, input allocation, and mandi selling windows.
 
-## Core Architecture & Engineering Highlights
+## Key Features
 
-
-
-1. **Living Farm Digital Twin (`DigitalTwinEngine`)**
-
-   - Maintains a synchronized state model of the farm, accumulating daily **Growing Degree Days (GDD)** ($T_{\text{base}} = 4.0^\circ\text{C}$) across 8 wheat phenological stages (Germination to Post-Harvest).
-
-   - Fuses multi-depth soil moisture, FAO-56 reference evapotranspiration ($ET_0$), and thermal stress vectors.
-
-
-
-2. **Dynamic Data Provenance Guardrails**
-
-   - Prevents silent data degradation and hallucinated outputs by tagging every observation with an auditable integrity state (`LIVE`, `LATEST_AVAILABLE`, `STALE`, `HISTORICAL_SEED`, `VERIFIED_LAB_TEST`, `REGIONAL_BASELINE`).
-
-   - Gracefully falls back to calibrated historical APMC baselines when upstream government feeds (`data.gov.in`) are unavailable.
-
-
-
-3. **Soil Health Card OCR + Human-in-the-Loop Confirmation Gate**
-
-   - Parses uploaded Soil Health Cards (`pH`, `N`, `P`, `K`, `OC`, `EC`) into a locked `PENDING_REVIEW` state.
-
-   - Enforces physical chemical feasibility bounds and refuses to update active farm soil profiles or generate fertilizer advisories until the farmer reviews and explicitly confirms the extracted values.
-
-
-
-4. **XGBoost Mandi Price Forecaster & Net Realization Engine**
-
-   - Forecasts 30-day commodity modal prices with **80% and 95% confidence intervals** (Out-of-sample validation: **MAE ₹84.30/qtl**, **MAPE 3.82%**, **$R^2 = 0.887$**).
-
-   - Evaluates **Sell Today vs. Wait 7 Days vs. Wait 15 Days** by accounting for godown storage carrying costs, weather dampness risk penalties, and distance-adjusted mandi transport costs.
-
-
-
----
-
-
+* **Farm Digital Twin:** Models crop phenology stages, soil moisture and nutrient profiles, and localized weather impacts across the crop lifecycle.
+* **AI What-If Decision Engine:** Uses trained **XGBoost** and **scikit-learn** models to simulate yield outcomes, input costs, and climate risk across multiple intervention scenarios.
+* **Mandi Intelligence & Net Profit Optimizer:** Compares nearby mandi commodity prices against transport and logistics costs to recommend the most profitable selling venue and timing.
+* **RESTful API & Interactive Frontend:** High-performance FastAPI backend paired with a responsive Next.js 14 and TypeScript dashboard.
 
 ## Tech Stack
 
+| Layer | Technologies |
+| :--- | :--- |
+| **Frontend** | Next.js 14, React, TypeScript, Tailwind CSS (Deployed on **Vercel**) |
+| **Backend** | Python 3.11+, FastAPI, Uvicorn, Pydantic, SQLAlchemy 2.0 (Deployed on **Render**) |
+| **Machine Learning** | XGBoost 2.1, scikit-learn, pandas, NumPy |
+| **Testing & Quality** | Pytest (116 automated unit & integration tests) |
 
+## Architecture
 
-- **Backend:** FastAPI, Uvicorn, SQLAlchemy 2.0, Pydantic v2, SQLite / PostgreSQL
+- **Frontend (Vercel CDN):** Next.js 14 application routing `/api/*` requests seamlessly to the cloud backend.
+- **Backend (Render Cloud):** FastAPI server handling REST endpoints, Pydantic validation, SQLAlchemy 2.0 persistence, and XGBoost ML inference.
 
-- **ML & Data:** XGBoost, Scikit-Learn, Pandas, NumPy, Custom Soil OCR Pipeline
+## Local Setup & Installation
 
-- **Frontend:** Next.js 14 (App Router), React 18, TypeScript, Tailwind CSS, Lucide Icons
+### 1. Clone the Repository
+    git clone https://github.com/AryanCodes352/krishi-intelligence.git
+    cd krishi-intelligence
 
-- **Testing:** Pytest & Pytest-Asyncio (**116 automated unit & integration tests**)
+### 2. Backend Setup (FastAPI)
+    cd backend
+    python -m venv .venv
+    .venv\Scripts\Activate.ps1
+    pip install -r requirements.txt
+    uvicorn app.main:app --reload --port 8000
 
+API Swagger documentation will be available at `http://localhost:8000/docs`.
 
+### 3. Frontend Setup (Next.js)
+    cd frontend
+    npm install
+    npm run dev
 
----
+Frontend application will run at `http://localhost:3000`.
 
-
-
-## Project Structure
-
-
-
-```text
-
-krishi-intelligence/
-
-├── backend/              # FastAPI routers, Digital Twin engine, provenance guardrails, OCR & tests
-
-├── frontend/             # Next.js 14 App Router UI, interactive charts & data provenance badges
-
-├── ml/                   # Feature engineering, XGBoost training & evaluation pipeline
-
-├── data/                 # Calibrated APMC seed datasets & district soil baselines
-
-├── render.yaml           # Render deployment blueprint
-
-├── requirements.txt      # Python runtime dependencies
-
-└── run.bat               # One-click local startup script (Windows)
-
-```
-
-
-
----
-
-
-
-## Local Setup
-
-
-
-```powershell
-
-# 1. Clone the repository
-
-git clone https://github.com/AryanCodes352/krishi-intelligence.git
-
-cd krishi-intelligence
-
-
-
-# 2. Launch FastAPI (:8000) and Next.js (:3000)
-
-.\run.bat
-
-```
-
-
-
-### Running the Test Suite
-
-
-
-```powershell
-
-pytest backend/tests
-
-```
-
-
-
----
-
-
+### 4. Run Automated Tests
+    cd backend
+    pytest
 
 ## Author
 
-
-
-Built by **[Aryan](https://github.com/AryanCodes352)**
+Built and deployed end-to-end by **Aryan** ([GitHub](https://github.com/AryanCodes352)).
